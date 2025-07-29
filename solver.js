@@ -336,7 +336,6 @@ async function submitFeedback() {
         
         // Clear input and update history
         feedbackInput.value = '';
-        renderGameHistory();
         updateRemainingAnswers(get_valid_guesses(possibleWords, gameState.greens, gameState.yellows, gameState.grays), gameState.currentGuess);
         
     } catch (error) {
