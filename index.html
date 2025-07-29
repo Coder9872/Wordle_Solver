@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Solver Interactive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Wordle Solver</h1>
+        
+        <div class="game-controls">
+            <button id="new-game-btn" class="control-btn">New Game</button>
+            <button id="reset-btn" class="control-btn">Reset Current Game</button>
+        </div>
+
+        <div id="current-guess-section" class="section">
+            <h3>Current Suggestion</h3>
+            <div id="current-guess-display">Click "New Game" to start!</div>
+            <div id="guess-info" class="guess-info"></div>
+        </div>
+
+        <div id="feedback-section" class="section" style="display: none;">
+            <h3>Enter Feedback</h3>
+            <p class="help-text">Enter 5 letters: <strong>g</strong>=green, <strong>y</strong>=yellow, <strong>b</strong>=black/gray<br>
+            Example: "ybbgb" means yellow, black, black, green, black</p>
+            
+            <div class="feedback-input-container">
+                <input type="text" id="feedback-input" maxlength="5" placeholder="e.g. ybbgb">
+                <button id="submit-feedback-btn">Submit Feedback</button>
+            </div>
+            
+            <div class="visual-feedback" id="visual-feedback"></div>
+        </div>
+
+        <div id="remaining-answers-section" class="section" style="display: none;">
+            <h3>Remaining Possible Answers</h3>
+            <div id="remaining-answers-list" class="remaining-answers"></div>
+        </div>
+
+        
+
+        <div id="game-status" class="section">
+            <div id="status-message"></div>
+        </div>
+    </div>
+    <script src="solver.js"></script>
+</body>
+</html>

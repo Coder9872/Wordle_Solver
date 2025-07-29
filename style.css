@@ -1,0 +1,286 @@
+body {
+    background: #6ac2a6;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: #fff;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    padding: 32px 24px 24px 24px;
+    text-align: center;
+}
+
+h1 {
+    color: #2d3a3a;
+    margin-bottom: 24px;
+}
+
+h3 {
+    color: #2d3a3a;
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+.section {
+    margin-bottom: 32px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.game-controls {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.control-btn {
+    background: #f7c948;
+    color: #2d3a3a;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.control-btn:hover {
+    background: #f4b400;
+}
+
+#current-guess-display {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d3a3a;
+    padding: 16px;
+    background: #e8f5e8;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.help-text {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.feedback-input-container {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+#feedback-input {
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    border: 2px solid #b0b0b0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: lowercase;
+    outline: none;
+    transition: border 0.2s;
+}
+
+#feedback-input:focus {
+    border-color: #6ac2a6;
+}
+
+#submit-feedback-btn {
+    background: #4ecb4e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#submit-feedback-btn:hover {
+    background: #45b845;
+}
+
+#submit-feedback-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.visual-feedback {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.letter-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.letter-green {
+    background: #4ecb4e;
+}
+
+.letter-yellow {
+    background: #e6c200;
+}
+
+.letter-gray {
+    background: #888;
+}
+
+.guess-entry {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.guess-number {
+    font-weight: bold;
+    color: #666;
+    min-width: 60px;
+}
+
+.guess-word {
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 80px;
+    text-transform: uppercase;
+}
+
+.guess-feedback {
+    display: flex;
+    gap: 2px;
+}
+
+.guess-feedback .letter-box {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+}
+
+.guess-info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+.remaining-answers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.remaining-answer {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #333;
+}
+
+.remaining-answer.highlight {
+    background: #e8f5e8;
+    border-color: #4caf50;
+    color: #2e7d32;
+}
+
+#status-message {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.status-success {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+.status-info {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+.status-warning {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+/* Legacy styles for backward compatibility */
+.input-row {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.input-row label {
+    min-width: 120px;
+    font-weight: 500;
+    color: #2d3a3a;
+    font-size: 15px;
+}
+
+input[type="text"].legacy {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid #b0b0b0;
+    text-align: center;
+    font-size: 18px;
+    margin-right: 2px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input.green {
+    background: #b6eeb7;
+    border-color: #4ecb4e;
+}
+
+input.yellow {
+    background: #fff7b2;
+    border-color: #e6c200;
+}
+
+input.gray {
+    background: #e0e0e0;
+    border-color: #888;
+    width: 120px;
+}
